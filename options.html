@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Limited Run Games Checkout Options</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="col-xs-12 col-sm-12">
+  <form role="form" class='form-horizontal'>
+    <h3>Limited Run Games Account</h3><br />
+    <div class="form-group row">
+      <label for="accountEmail" class="col-sm-1 col-form-label">Email</label>
+      <div class="col-sm-3">
+        <input type="email" class="form-control" id="accountEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="accountPass" class="col-sm-1 col-form-label">Password</label>
+      <div class="col-sm-3">
+        <input type="password" class="form-control" id="accountPass" placeholder="Password">
+      </div>
+    </div>
+
+    <h3>Shipping Info</h3><br />
+    <div id="shipping">
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="shippingFirstName" placeholder="First Name">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="shippingLastName" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="shippingCompany" placeholder="Company (optional)">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="shippingAddress" placeholder="Address">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="shippingAddress2" placeholder="Apt, Suite, etc. (optional)">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="shippingCity" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="shippingCountry" placeholder="Country">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="form-control" id="shippingState" placeholder="State">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="form-control" id="shippingZip" placeholder="Zip code">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" data-format="(ddd) ddd-dddd" class="input-medium bfh-phone form-control" id="shippingPhone">
+        </div>
+      </div>
+    </div>
+
+    <h3>Billing Info</h3>
+
+    <label>
+      <input type="checkbox" id="isBillingSameAsShipping">
+      Same as Shipping
+    </label>
+
+    <br />
+
+    <div id="billing">
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="billingFirstName" placeholder="First Name">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="billingLastName" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="billingCompany" placeholder="Company (optional)">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="billingAddress" placeholder="Address">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="billingAddress2" placeholder="Apt, Suite, etc. (optional)">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="billingCity" placeholder="City">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="billingCountry" placeholder="Country">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="form-control" id="billingState" placeholder="State">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="form-control" id="billingZip" placeholder="Zip code">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" data-format="(ddd) ddd-dddd" class="input-medium bfh-phone form-control" id="billingPhone">
+        </div>
+      </div>
+    </div>
+    <h3>Payment Method</h3>
+
+    <div class="form-group row">
+      <div class="col-sm-2">
+        <select class="form-control" id="paymentMethod">
+          <option value="paypal">Paypal</option>
+          <option value="amazon">Amazon Pay</option>
+          <option value="creditCard">Credit Card</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="paypal" style="display: none;">
+      <div class="form-group row">
+        <div class="col-sm-3">
+          <input type="email" class="form-control" id="paypalEmail" placeholder="Paypal Email">
+        </div>
+        <div class="col-sm-3">
+          <input type="password" class="form-control" id="paypalPass" placeholder="Paypal Password">
+        </div>
+      </div>
+    </div>
+
+    <div id="amazon" style="display: none;">
+      <div class="form-group row">
+        <div class="col-sm-3">
+          <input type="email" class="form-control" id="amazonEmail" placeholder="Amazon Email">
+        </div>
+        <div class="col-sm-3">
+          <input type="password" class="form-control" id="amazonPass" placeholder="Amazon Password">
+        </div>
+      </div>
+    </div>
+
+    <div id="creditCard" style="display: none;">
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="cardNumber" placeholder="Card number">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="cardName" placeholder="Name on card">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="input-medium form-control" id="cardExpiry" placeholder="MM / YY">
+        </div>
+        <div class="col-sm-1">
+          <input type="text" class="input-medium form-control" id="cardCVV" placeholder="CVV">
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="alert alert-success" role="alert" id="status" style="display: none;"></div>
+    <button type="button" class="btn btn-primary"id="save">Save settings</button>
+    <button type="button" class="btn btn-danger" id="clear">Clear settings</button>
+
+  </form>
+</div>
+<script src="options.js"></script>
+</body>
+</html>

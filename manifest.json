@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Limited Run checkout",
+  "description": "Buy things real fast",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/19.png",
+      "38": "images/38.png"
+    },
+    "default_title": "Click to checkout"
+  },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "options_page": "options.html",
+  "background":{
+    "scripts": ["background.js"]
+  }
+}
